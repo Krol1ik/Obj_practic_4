@@ -81,9 +81,12 @@ const personalMovieDB = {
                 personalMovieDB.genres[i-1] = checkGeners;
             }
         }
-        for(let key in this.genres){
-            console.log(`Любимйы жанр #${+key+1}: ${this.genres[key]}`);
-        }
+        // for(let key in this.genres){
+        //     console.log(`Любимйы жанр #${+key+1}: ${this.genres[key]}`);
+        // }
+        personalMovieDB.genres.forEach((item, i) => {
+            console.log(`Любимйы жанр #${i + 1}: ${item}`);
+        });
     },
     toggleVisibleMyDB: function(){
         if(!this.private){
